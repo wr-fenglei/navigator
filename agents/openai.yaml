@@ -1,4 +1,6 @@
 interface:
-  display_name: "推进"
-  short_description: "用苏格拉底提问明确目标, 把方案拆成可验证的步骤, 持续推进到验收"
-  default_prompt: "使用 $advance 处理当前任务, 根据已有信息选择阶段, 按本次要求和已有授权推进"
+  display_name: "探索发现循环"
+  short_description: "用苏格拉底式提问明确目标, 拆解实施循环, 由主 agent 调度执行和验证"
+  default_prompt: "使用 $explore-discovery-loops 处理当前任务, 逐步明确目标和做法, 按本次范围推进实施与验证"
+policy:
+  allow_implicit_invocation: true
