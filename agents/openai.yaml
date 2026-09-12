@@ -1,3 +1,4 @@
 interface:
   display_name: "推进"
   short_description: "用苏格拉底提问明确目标, 把方案拆成可验证的步骤, 持续推进到验收"
+  default_prompt: "使用 $advance 处理当前任务, 根据已有信息选择阶段, 按本次要求和已有授权推进"

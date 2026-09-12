@@ -14,7 +14,17 @@
 
 仓库根目录就是技能目录, 入口是 `SKILL.md`, 安装时保留 `references/` 和 `agents/` 的相对位置
 
+自己维护这个技能时, 可以直接把仓库克隆到全局技能目录, 让安装位置和 Git 工作目录共用一份源码, 下面的命令适用于 `CODEX_HOME` 未设置且目标目录不存在的情况
+
+```sh
+git clone https://github.com/wr-fenglei/advance.git ~/.codex/skills/advance
+```
+
+如果设置了 `CODEX_HOME`, 使用它下面的 `skills/advance` 目录, 安装后新建一个会话, 如果技能没有出现, 重启 Codex 后再检查
+
 ## 使用
+
+在桌面端输入 `/`, 在命令列表中搜索 `advance` 或 `推进` 并选择这个技能, 也可以输入 `$advance` 后补充任务要求, 已启用技能会出现在斜杠命令列表中, 见 [官方说明](https://learn.chatgpt.com/docs/reference/slash-commands)
 
 从想法开始推进
 
@@ -42,7 +52,7 @@ $advance 按这份计划继续执行, 核对已有产物和证据, 推进到约�
 - [探索](references/explore.md): 澄清目标, 检查假设, 取得选择路径所需的证据
 - [拆解](references/plan.md): 安排实施循环, 依赖和验证方式
 - [实施](references/execute.md): 调度执行, 核验结果, 处理中断和后续运行
-- [agents/openai.yaml](agents/openai.yaml): 技能在界面中的名称和简介
+- [agents/openai.yaml](agents/openai.yaml): 技能在界面中的名称, 简介和调用时的默认提示
 
 ## 维护
 
@@ -50,4 +60,6 @@ $advance 按这份计划继续执行, 核对已有产物和证据, 推进到约�
 
 修改阶段规则后, 检查相关场景是否仍按约定推进和停止, 提交前运行 `git diff --check`, 推送后核对远端提交和文件内容
 
-需要让本地安装随源码变化时, 可以把技能安装入口链接到仓库目录, 复制安装的版本需要另行同步, 具体任务的材料, 进度和证据放在任务目录里
+单独维护这个技能时, Git 仓库可以直接放在全局的 `skills/advance` 目录里, 不依赖按日期建立的会话目录, 修改后检查差异并提交, 具体任务的材料, 进度和证据放在任务目录里
+
+如果使用独立的开发目录, 可以把全局技能入口链接到仓库, 复制安装的版本需要另行同步
