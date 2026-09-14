@@ -1,2 +1,5 @@
 .DS_Store
 work/
+.navigator/
+__pycache__/
+*.pyc

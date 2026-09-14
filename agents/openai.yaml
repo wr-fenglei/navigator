@@ -1,6 +1,6 @@
 interface:
   display_name: "导航者"
-  short_description: "用苏格拉底式提问明确目标, 拆出多个不同的实施循环, 协调执行和验证"
+  short_description: "通过提问明确目标, 用数据库记录多个循环, 协调实施与独立验证"
   default_prompt: "使用 $navigator 帮我处理当前这件事"
 policy:
   allow_implicit_invocation: true
